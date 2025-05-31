@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Aturan Penulisan{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto mt-10 px-4 text-center">
+  <h1 class="text-2xl font-bold mb-6">Aturan Penulisan Input Kalkulator</h1>
+
+  <div class="overflow-x-auto">
+    <table class="table-auto mx-auto border border-collapse">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border px-4 py-2">Fungsi Matematika</th>
+          <th class="border px-4 py-2">Input pada Kalkulator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">3x</td>
+          <td class="border px-4 py-2">3*x</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">x²</td>
+          <td class="border px-4 py-2">x**2</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">e<sup>x</sup></td>
+          <td class="border px-4 py-2">exp(x)</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">ln(x)</td>
+          <td class="border px-4 py-2">log(x)</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">√x</td>
+          <td class="border px-4 py-2">sqrt(x)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
