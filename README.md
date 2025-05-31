@@ -33,4 +33,4 @@ Anggota:
 Website yang dibuat merupakan implementasi perhitungan metode numerik yang memudahkan pengguna dalam melakukan percobaan di setiap fungsi yang ditemukan. Website ini dibuat dalam bahasa pemrograman Python serta kebutuhan penunjang lainnya layaknya Tailwind CSS (sebagai styling web), PythonAnywhere (hosting website), serta HTML (sebagai webformnya).
 
 **Lakukan pengaksesan website:**  
-[➡️ Klik ini untuk mencoba website]([link](https://numericmethod.pythonanywhere.com/))
+[➡️ Klik ini untuk mencoba website](https://numericmethod.pythonanywhere.com/)
