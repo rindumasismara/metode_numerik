@@ -30,12 +30,13 @@ Anggota:
 
 ## Aturan Penulisan Input Kalkulator
 
-Fungsi Matematika        |      Input pada Kalkulator
-3x                       |      3*x
-x^2                      |      x**2
-e^x                      |      exp(x)
-ln(x)                    |      log(x)
-√x                       |      sqrt(x)
+|      Fungsi Matematika        |      Input pada Kalkulator      |
+|:-----------------------------:|:-------------------------------:|
+|           3x                  |              3*x                |
+|           x^2                 |              x**2               |
+|           e^x                 |             exp(x)              |
+|          ln(x)                |             log(x)              |
+|            √x                 |             sqrt(x)             |
 
 ---
 
