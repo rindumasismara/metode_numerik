@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Metode Iterasi Titik Tetap{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto mt-10 px-4">
+  <h1 class="text-2xl font-semibold mb-6 text-center">Metode Iterasi Titik Tetap</h1>
+
+  <div class="bg-white p-6 rounded shadow mb-6">
+    <h2 class="text-lg font-bold mb-2">Penjelasan Metode Iterasi Titik Tetap</h2>
+    <p class="mb-2">
+      Metode Iterasi Titik Tetap digunakan untuk mencari akar dari suatu fungsi \( f(x) = 0 \) dengan mengubahnya ke bentuk:
+      \( x = g(x) \).
+    </p>
+    <p class="mb-2">
+      Proses iteratif dilakukan dengan menggunakan rumus:
+    </p>
+    <p class="mb-2">
+      \( x_{n+1} = g(x_n) \)
+    </p>
+    <p class="mb-2">
+      Iterasi dilanjutkan hingga selisih antara dua hasil berturut-turut cukup kecil:
+      \( |x_{n+1} - x_n| < \varepsilon \)
+    </p>
+    <p class="mb-2">
+      Agar metode ini konvergen, fungsi \( g(x) \) harus memenuhi syarat tertentu seperti:
+      \( |g'(x)| < 1 \) pada interval yang berisi akar.
+    </p>
+    <p class="mb-2">Langkah-langkah umum:</p>
+    <ul class="list-disc list-inside space-y-1 mb-2">
+      <li>Transformasi \( f(x) = 0 \) menjadi bentuk \( x = g(x) \)</li>
+      <li>Pilih nilai awal \( x_0 \)</li>
+      <li>Hitung \( x_1 = g(x_0) \), lalu \( x_2 = g(x_1) \), dan seterusnya</li>
+      <li>Ulangi hingga \( |x_{n+1} - x_n| < \varepsilon \)</li>
+    </ul>
+  </div>
+
+  <form method="POST" class="space-y-4 bg-white p-6 rounded shadow">
+    <div>
+      <label class="block mb-1 font-medium">Fungsi f(x):</label>
+      <input type="text" name="function" required placeholder="Contoh: exp(-x) - 4*x**2"
+             class="w-full px-3 py-2 border rounded" />
+    </div>
+    <div>
+      <label class="block mb-1 font-medium">Nilai Awal (x₀):</label>
+      <input type="number" step="any" name="x0" required class="w-full px-3 py-2 border rounded" />
+    </div>
+    <div>
+      <label class="block mb-1 font-medium">Toleransi Error:</label>
+      <input type="number" step="any" name="tolerance" required class="w-full px-3 py-2 border rounded" />
+    </div>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Hitung Akar
+    </button>
+  </form>
+
+  {% if error %}
+    <div class="mt-6 text-red-600 font-semibold">{{ error }}</div>
+  {% endif %}
+
+  {% if result %}
+    <div class="mt-6 text-green-700 font-semibold">
+      Akar terbaik ditemukan: <span class="font-bold">{{ result }}</span><br>
+      Fungsi g(x) terbaik: <span class="italic">{{ best_label }}</span>
+    </div>
+  {% endif %}
+
+  {% if all_tables %}
+    <div class="mt-10 space-y-10">
+      {% for table in all_tables %}
+        <div>
+          <h2 class="text-lg font-semibold mb-2">Iterasi untuk: <span class="italic">{{ table.label }}</span></h2>
+          <table class="w-full text-sm border border-collapse">
+            <thead class="bg-gray-100 text-center">
+              <tr>
+                <th class="border px-3 py-2">Iterasi</th>
+                <th class="border px-3 py-2">x₀</th>
+                <th class="border px-3 py-2">x₁ = g(x₀)</th>
+                <th class="border px-3 py-2">|x₁ - x₀|</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in table.iterations %}
+              <tr class="text-center">
+                <td class="border px-2 py-1">{{ row.i }}</td>
+                <td class="border px-2 py-1">{{ row.x0 }}</td>
+                <td class="border px-2 py-1">{{ row.x1 }}</td>
+                <td class="border px-2 py-1">{{ row.error }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

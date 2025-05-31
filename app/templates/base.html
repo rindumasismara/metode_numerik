@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Metode Numerik{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+      MathJax = {
+        tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="bg-blue-600 text-white shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-semibold text-white">Kalkulator Metode Numerik</h1>
+      <nav class="space-x-4">
+        <a href="/" class="hover:underline">Beranda</a>
+        <a href="/credit" class="hover:underline">Credit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="text-center text-sm text-gray-600 py-6">
+    &copy; 2025 Metode Numerik - Kelompok 2 - 3IA14

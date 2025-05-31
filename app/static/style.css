@@ -1,0 +1,48 @@
+/* Font default modern dan halus */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tambahan animasi dan transisi halus */
+button,
+a,
+input,
+label {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efek hover lembut pada tombol dan link */
+button:hover,
+a:hover {
+  transform: translateY(-2px);
+}
+
+/* Fokus yang jelas pada input */
+input:focus {
+  border-color: #2563eb; /* Biru dari Tailwind */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Judul dan heading */
+h1, h2 {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Gaya tabel */
+table {
+  border-radius: 0.375rem; /* Rounded */
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f1f5f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tbody tr:hover {
+  background-color: #e2e8f0;
+}

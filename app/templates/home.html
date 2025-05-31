@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto mt-10 px-4 text-center">
+  <h1 class="text-3xl font-bold mb-4">Selamat Datang di Kalkulator Metode Numerik</h1>
+  <p class="text-lg mb-6">
+    Website ini menyediakan perhitungan metode numerik untuk menyelesaikan
+    <strong>persamaan non-linier</strong> pada mata kuliah Rekayasa Komputasional.<br>
+    Kamu dapat mencoba berbagai metode berikut tanpa perlu login!<br>
+    Klik metode yang kamu inginkan!
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+    <a href="/bisection" class="block bg-white shadow hover:shadow-md p-5 rounded border text-blue-600 font-semibold hover:bg-blue-50">
+      Metode Bagi Dua
+    </a>
+    <a href="/regulafalsi" class="block bg-white shadow hover:shadow-md p-5 rounded border text-blue-600 font-semibold hover:bg-blue-50">
+      Metode Regula Falsi
+    </a>
+    <a href="/fixedpoint" class="block bg-white shadow hover:shadow-md p-5 rounded border text-blue-600 font-semibold hover:bg-blue-50">
+      Metode Iterasi Titik Tetap
+    </a>
+    <a href="/newtonraphson" class="block bg-white shadow hover:shadow-md p-5 rounded border text-blue-600 font-semibold hover:bg-blue-50">
+      Metode Newton Raphson
+    </a>
+  </div>
+  <div class="flex justify-center mt-4">
+    <a href="/secant" class="block bg-white shadow hover:shadow-md p-5 rounded border text-blue-600 font-semibold hover:bg-blue-50 w-full md:w-1/2">
+      Metode Secant
+    </a>
+  </div>
+
+</div>
+{% endblock %}
