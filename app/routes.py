@@ -11,6 +11,10 @@ main = Blueprint('main', __name__)
 def home():
     return render_template('home.html')
 
+@main.route('/aturan')
+def aturan():
+    return render_template('aturan.html')
+
 @main.route('/credit')
 def credit():
     return render_template('credit.html')
