@@ -33,8 +33,8 @@ Anggota:
 |      Fungsi Matematika        |      Input pada Kalkulator      |
 |:-----------------------------:|:-------------------------------:|
 |           3x                  |              3*x                |
-|           x^2                 |              x**2               |
-|           e^x                 |             exp(x)              |
+|           x²                  |              x**2               |
+|           e×                 |             exp(x)              |
 |          ln(x)                |             log(x)              |
 |            √x                 |             sqrt(x)             |
 
